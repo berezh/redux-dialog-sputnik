@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { DialogReduxState } from '../redux/interfaces';
 
@@ -7,7 +7,11 @@ interface Props {
     children: (options: any) => React.ReactElement;
 }
 
-export const DialogWrapper: React.FC<Props> = ({ name, children }) => {
-    const options = useSelector((x: { dialog: DialogReduxState }) => x.dialog[name]);
+const DialogWrapperComponent: React.FC<Props> = ({ name, children }) => {
+    const options = useSelector(
+        (x: { dialog: DialogReduxState }) => x.dialog[name],
+    );
     return options ? children(options) : null;
 };
+
+export const DialogWrapper = memo(DialogWrapperComponent);
