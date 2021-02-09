@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { DialogState } from '../redux/interfaces';
+import { DialogReduxState } from '../redux/interfaces';
 
 interface Props {
     name: string;
@@ -8,6 +8,6 @@ interface Props {
 }
 
 export const DialogWrapper: React.FC<Props> = ({ name, children }) => {
-    const options = useSelector((x: { dialog: DialogState }) => x.dialog[name]);
+    const options = useSelector((x: { dialog: DialogReduxState }) => x.dialog[name]);
     return options ? children(options) : null;
 };

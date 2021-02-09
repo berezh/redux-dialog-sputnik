@@ -16,12 +16,10 @@ npm install dialog-redux
 
 ### Attach reducer to redux
 
-```jsx
+```tsx
 import { dialogReducer } from 'dialog-redux';
-...
 import { combineReducers } from 'redux'
 ...
-
 const reducer = combineReducers({
   ...reducers,
   dialog: dialogReducer,
@@ -32,12 +30,10 @@ const reducer = combineReducers({
 
 #### Material UI
 
-```jsx
+```tsx
 import { DialogWrapper } from 'dialog-redux';
-...
 import Dialog from '@material-ui/core/Dialog';
 ...
-
 export const MyDialog: React.FC = () => {
     return (
         <DialogWrapper name="my-dialog-name">
@@ -45,7 +41,7 @@ export const MyDialog: React.FC = () => {
                 return (
                     <Dialog open={true} ... >
                         ...
-                    </Modal>
+                    </Dialog>
                 );
             }}
         </DialogWrapper>
@@ -55,12 +51,10 @@ export const MyDialog: React.FC = () => {
 
 #### Bootstrap
 
-```jsx
+```tsx
 import { DialogWrapper } from 'dialog-redux';
-...
 import { Modal } from 'react-bootstrap';
 ...
-
 export const MyDialog: React.FC = () => {
     return (
         <DialogWrapper name="my-dialog-name">
@@ -78,12 +72,10 @@ export const MyDialog: React.FC = () => {
 
 #### Blueprintjs
 
-```jsx
+```tsx
 import { DialogWrapper } from 'dialog-redux';
-...
 import { Dialog } from '@blueprintjs/core';
 ...
-
 export const MyDialog: React.FC = () => {
     return (
         <DialogWrapper name="my-dialog-name">
@@ -91,28 +83,28 @@ export const MyDialog: React.FC = () => {
                 return (
                     <Dialog isOpen={true} ... >
                         ...
-                    </Modal>
+                    </Dialog>
                 );
             }}
         </DialogWrapper>
     );
 };
-
 ```
 
 ### Show
 
 #### In component
 
-```jsx
+```tsx
 import { showDialog } from 'dialog-redux';
-...
 import { MyDialog } from '../my-dialog';
+import { useDispatch } from 'react-redux';
 ...
-
 export const CustomComponent: React.FC = () => {
+    const dispatch = useDispatch();
+
     const handleShow = useCallback(()=>{
-        showDialog('my-dialog-name');
+        dispatch(showDialog('my-dialog-name'));
     }, []);
 
     return (
@@ -122,20 +114,68 @@ export const CustomComponent: React.FC = () => {
         </>
     );
 };
-
 ```
 
 #### In Redux Saga
 
-```jsx
+```tsx
 import { showDialog, hideDialog } from 'dialog-redux';
 ...
-
 function* mySagaMethod(): SagaIterator {
     ...
     yield put(showDialog('my-dialog-name'));
     ...
     yield put(hideDialog('my-dialog-name'));
 }
+```
 
+### Pass Options to dialog body
+
+#### Define interface
+
+```tsx
+export interface MyDialogOptions {
+    title: string;
+    message: string;
+}
+```
+
+#### Define options
+
+```tsx
+const handleShow = useCallback(() => {
+    dispatch(
+        showDialog<MyDialogOptions>('my-dialog-name', {
+            title: 'My Dialog',
+            message: 'Content message text',
+        }),
+    );
+}, []);
+```
+
+#### Use options inside dialog
+
+```tsx
+import { DialogWrapper } from 'dialog-redux';
+import { Modal } from 'react-bootstrap';
+...
+export const MyDialog: React.FC = () => {
+    return (
+        <DialogWrapper name="my-dialog-name">
+            {(options: MyDialogOptions) => {
+                return (
+                    <Modal show={true} header ... >
+                        <Modal.Header closeButton>
+                            <Modal.Title>{options.title}</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <p>{options.message}</p>
+                        </Modal.Body>
+                        ...
+                    </Modal>
+                );
+            }}
+        </DialogWrapper>
+    );
+};
 ```

@@ -3,6 +3,6 @@ export interface DialogPayload {
     options?: any;
 }
 
-export interface DialogState {
+export interface DialogReduxState {
     [key: string]: any;
 }
