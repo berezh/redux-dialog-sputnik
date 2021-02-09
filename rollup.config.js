@@ -9,11 +9,7 @@ const plugins = [
         typescript: require('typescript'),
     }),
     scss({
-        output: true,
-        output: function(styles, styleNodes) {
-            fs.writeFileSync('dist/index.scss', styles);
-            fs.writeFileSync('example/src/dialog-redux/index.scss', styles);
-        },
+        output: false,
     }),
 ];
 
@@ -34,11 +30,6 @@ export default [
         output: [
             { file: pkg.main, format: 'cjs' },
             { file: pkg.module, format: 'esm' },
-            {
-                file: 'example/src/dialog-redux/index.js',
-                format: 'es',
-                banner: '/* eslint-disable */',
-            },
         ],
     },
 ];

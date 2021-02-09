@@ -1,6 +1,6 @@
 {
     "name": "dialog-redux",
-    "version": "2.3.2",
+    "version": "0.0.1",
     "description": "Redux dialog utils",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
@@ -37,7 +37,7 @@
         "build-watch": "rollup -c -w",
         "start": "npm run build-watch",
         "test": "ts-node test/test.ts",
-        "lint": "eslint ./src/**/*.ts ./src/**/*.tsx ./example/src/**/*.ts ./example/src/**/*.tsx",
+        "lint": "eslint ./src/**/*.ts ./src/**/*.tsx",
         "lint:fix": "npm run test:lint -- --fix"
     },
     "repository": {
