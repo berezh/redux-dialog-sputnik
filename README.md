@@ -1,9 +1,9 @@
-# dialog-redux
+# redux-dialog-wrapper
 
 Redux dialog stuff
 
-<a href="https://www.npmjs.com/package/dialog-redux">
-    <img src="https://nodei.co/npm/dialog-redux.png?mini=true"/>
+<a href="https://www.npmjs.com/package/redux-dialog-wrapper">
+    <img src="https://nodei.co/npm/redux-dialog-wrapper.png?mini=true"/>
 </a>
 
 ## Usage
@@ -11,13 +11,13 @@ Redux dialog stuff
 ### Installation:
 
 ```
-npm install dialog-redux
+npm install redux-dialog-wrapper
 ```
 
 ### Attach reducer to redux
 
 ```tsx
-import { dialogReducer } from 'dialog-redux';
+import { dialogReducer } from 'redux-dialog-wrapper';
 import { combineReducers } from 'redux'
 ...
 const reducer = combineReducers({
@@ -31,7 +31,7 @@ const reducer = combineReducers({
 #### Material UI
 
 ```tsx
-import { DialogWrapper } from 'dialog-redux';
+import { DialogWrapper } from 'redux-dialog-wrapper';
 import Dialog from '@material-ui/core/Dialog';
 ...
 export const MyDialog: React.FC = () => {
@@ -52,7 +52,7 @@ export const MyDialog: React.FC = () => {
 #### Bootstrap
 
 ```tsx
-import { DialogWrapper } from 'dialog-redux';
+import { DialogWrapper } from 'redux-dialog-wrapper';
 import { Modal } from 'react-bootstrap';
 ...
 export const MyDialog: React.FC = () => {
@@ -73,7 +73,7 @@ export const MyDialog: React.FC = () => {
 #### Blueprintjs
 
 ```tsx
-import { DialogWrapper } from 'dialog-redux';
+import { DialogWrapper } from 'redux-dialog-wrapper';
 import { Dialog } from '@blueprintjs/core';
 ...
 export const MyDialog: React.FC = () => {
@@ -96,7 +96,7 @@ export const MyDialog: React.FC = () => {
 #### In component
 
 ```tsx
-import { showDialog } from 'dialog-redux';
+import { showDialog } from 'redux-dialog-wrapper';
 import { MyDialog } from '../my-dialog';
 import { useDispatch } from 'react-redux';
 ...
@@ -119,7 +119,7 @@ export const CustomComponent: React.FC = () => {
 #### In Redux Saga
 
 ```tsx
-import { showDialog, hideDialog } from 'dialog-redux';
+import { showDialog, hideDialog } from 'redux-dialog-wrapper';
 ...
 function* mySagaMethod(): SagaIterator {
     ...
@@ -156,7 +156,7 @@ const handleShow = useCallback(() => {
 #### Use options inside dialog
 
 ```tsx
-import { DialogWrapper } from 'dialog-redux';
+import { DialogWrapper } from 'redux-dialog-wrapper';
 import { Modal } from 'react-bootstrap';
 ...
 export const MyDialog: React.FC = () => {

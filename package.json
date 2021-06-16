@@ -1,7 +1,7 @@
 {
-    "name": "dialog-redux",
-    "version": "0.0.4",
-    "description": "Redux dialog utils",
+    "name": "redux-dialog-wrapper",
+    "version": "0.0.1",
+    "description": "Redux Dialog Wrapper",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
@@ -13,7 +13,6 @@
         "@typescript-eslint/eslint-plugin": "^4.26.0",
         "@typescript-eslint/parser": "^4.26.0",
         "classnames": "^2.2.6",
-        "concurrently": "^4.1.1",
         "eslint": "^7.27.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-config-varp": "0.0.11",
@@ -52,7 +51,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/berezh/dialog-redux.git"
+        "url": "git+https://github.com/berezh/redux-dialog-wrapper.git"
     },
     "keywords": [
         "react",
@@ -62,9 +61,9 @@
     "author": "Vadym Poberezhnyi",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/berezh/dialog-redux/issues"
+        "url": "https://github.com/berezh/redux-dialog-wrapper/issues"
     },
-    "homepage": "https://github.com/berezh/dialog-redux#readme",
+    "homepage": "https://github.com/berezh/redux-dialog-wrapper#readme",
     "files": [
         "dist"
     ],
