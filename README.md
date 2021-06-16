@@ -6,7 +6,7 @@ Redux dialog stuff
     <img src="https://nodei.co/npm/redux-dialog-wrapper.png?mini=true"/>
 </a>
 
-## Usage
+[Demo](https://varp.com/redux-dialog)
 
 ### Installation:
 
@@ -14,7 +14,7 @@ Redux dialog stuff
 npm install redux-dialog-wrapper
 ```
 
-### Attach reducer to redux
+### Set Up Reducer
 
 ```tsx
 import { dialogReducer } from 'redux-dialog-wrapper';
