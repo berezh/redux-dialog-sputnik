@@ -17,8 +17,6 @@ jobs:
     - run: npm install
     - run: npm run lint
     - run: npm run build
-    - run: npm deprecate dialog-redux@0.0.5 ""
-    - run: npm publish
-    - run: npm deprecate dialog-redux "Use redux-dialog-wrapper instead"
+    - run: npm deprecate dialog-redux ""
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
