@@ -2,7 +2,7 @@ name: NPM Publish
 
 on:
   push:
-    branches: [publish]
+    branches: [deprecated]
 
 jobs:
   publish:
