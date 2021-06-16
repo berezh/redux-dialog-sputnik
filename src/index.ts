@@ -3,10 +3,4 @@ import { showDialog, hideDialog } from './redux/actions';
 import { DialogWrapper } from './wrapper';
 import { DialogReduxState } from './redux/interfaces';
 
-export {
-    dialogReducer,
-    showDialog,
-    hideDialog,
-    DialogWrapper,
-    DialogReduxState,
-};
+export { dialogReducer, showDialog, hideDialog, DialogWrapper, DialogReduxState };

@@ -1,4 +1,5 @@
 import { newAction } from 'redux-sputnik';
+
 import { DialogPayload } from './interfaces';
 import { DialogActionTypes } from './types';
 

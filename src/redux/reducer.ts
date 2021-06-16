@@ -1,4 +1,5 @@
 import { newReducer } from 'redux-sputnik';
+
 import { DialogActionTypes } from './types';
 import { DialogPayload, DialogReduxState } from './interfaces';
 
