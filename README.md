@@ -1,1 +1,3 @@
-<b style="color:red">Deprecated, use [redux-dialog-wrapper](https://www.npmjs.com/package/redux-dialog-wrapper) instead</b>
+<a href="https://www.npmjs.com/package/redux-dialog-wrapper">
+    <img src="https://nodei.co/npm/redux-dialog-wrapper.png?mini=true"/>
+</a>

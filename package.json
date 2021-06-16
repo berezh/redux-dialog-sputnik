@@ -1,6 +1,6 @@
 {
     "name": "dialog-redux",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Redux dialog utils",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
@@ -50,21 +50,9 @@
         "lint": "eslint ./src/**/*.ts ./src/**/*.tsx",
         "lint:fix": "eslint ./src/**/* --fix"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/berezh/dialog-redux.git"
-    },
-    "keywords": [
-        "react",
-        "redux",
-        "dialog"
-    ],
+    "keywords": [],
     "author": "Vadym Poberezhnyi",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/berezh/dialog-redux/issues"
-    },
-    "homepage": "https://github.com/berezh/dialog-redux#readme",
     "files": [
         "dist"
     ],
