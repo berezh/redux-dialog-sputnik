@@ -1,12 +1,16 @@
 # redux-dialog-wrapper
 
-<p>Dialog shown with redux action</p>
+Dialog shown with redux action
+
+---
 
 <a href="https://www.npmjs.com/package/redux-dialog-wrapper">
     <img src="https://nodei.co/npm/redux-dialog-wrapper.png?mini=true"/>
 </a>
 
 [DEMO](https://varp.com/redux-dialog)
+
+---
 
 ### Installation:
 
