@@ -1,21 +1,9 @@
+import { createAction } from '@reduxjs/toolkit';
+
 import { DialogPayload } from './interfaces';
-import { DialogActionTypes } from './types';
 
-function newAction<T>(type: any, payload?: T): any {
-    return {
-        type,
-        payload,
-    };
-}
+const createDialogAction = <T>(actionName: string) => createAction<T>(`dialog/${actionName}`);
 
-export const showDialog = <TOptions = any>(name: string, options?: TOptions) =>
-    newAction<DialogPayload>(DialogActionTypes.SHOW, {
-        name,
-        options: options ? options : {},
-    });
+export const showDialog = createDialogAction<DialogPayload>('showDialog');
 
-export const hideDialog = (name: string) =>
-    newAction<DialogPayload>(DialogActionTypes.SHOW, {
-        name,
-        options: undefined,
-    });
+export const hideDialog = createDialogAction<Omit<DialogPayload, 'options'>>('showDialog');
