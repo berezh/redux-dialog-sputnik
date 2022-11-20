@@ -1,4 +1,6 @@
-import { newActionType } from 'redux-sputnik';
+function newActionType(prefix: string, type: string): string {
+    return `@${prefix}/${type}`;
+}
 
 const prefix = '@dialog';
 

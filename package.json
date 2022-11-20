@@ -1,6 +1,6 @@
 {
     "name": "redux-dialog-wrapper",
-    "version": "1.0.2",
+    "version": "2.0.0",
     "description": "Redux Dialog Wrapper",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
@@ -27,7 +27,6 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-redux": "^7.2.4",
-        "redux-sputnik": "0.0.5",
         "rollup": "^1.19.4",
         "rollup-plugin-scss": "^1.0.2",
         "rollup-plugin-typescript2": "^0.22.1",
@@ -37,9 +36,9 @@
         "typescript": "^3.5.3"
     },
     "peerDependencies": {
-        "react": "^16.0.0",
-        "react-dom": "^16.0.0",
-        "react-redux": "^7.0.0"
+        "react": ">16",
+        "react-dom": ">16",
+        "react-redux": ">7"
     },
     "scripts": {
         "build": "rollup -c",
@@ -66,6 +65,5 @@
     "homepage": "https://github.com/berezh/redux-dialog-wrapper#readme",
     "files": [
         "dist"
-    ],
-    "dependencies": {}
+    ]
 }
