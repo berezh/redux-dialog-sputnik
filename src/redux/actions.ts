@@ -3,9 +3,9 @@ import { DialogActionTypes } from './types';
 
 function newAction<T>(type: any, payload?: T): any {
     return {
-            type,
-            payload,
-        };
+        type,
+        payload,
+    };
 }
 
 export const showDialog = <TOptions = any>(name: string, options?: TOptions) =>
