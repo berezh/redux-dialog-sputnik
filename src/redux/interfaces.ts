@@ -1,5 +1,8 @@
-export interface DialogPayload {
+export interface DialogNamePayload {
     name: string;
+}
+
+export interface DialogPayload extends DialogNamePayload {
     options?: any;
 }
 
