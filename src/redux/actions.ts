@@ -6,4 +6,4 @@ const createDialogAction = <T>(actionName: string) => createAction<T>(`dialog/${
 
 export const showDialog = createDialogAction<DialogPayload>('showDialog');
 
-export const hideDialog = createDialogAction<Omit<DialogPayload, 'options'>>('showDialog');
+export const hideDialog = createDialogAction<Omit<DialogPayload, 'options'>>('hideDialog');
