@@ -1,6 +1,6 @@
 {
     "name": "redux-dialog-wrapper",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Redux Dialog Wrapper",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
@@ -36,9 +36,9 @@
         "typescript": "^3.5.3"
     },
     "peerDependencies": {
-        "react": ">16",
-        "react-dom": ">16",
-        "react-redux": ">7"
+        "react": ">=16",
+        "react-dom": ">=16",
+        "react-redux": ">=7"
     },
     "scripts": {
         "build": "rollup -c",
