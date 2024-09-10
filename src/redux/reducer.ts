@@ -21,10 +21,8 @@ const INITIAL_STATE: DialogReduxState = {};
 export const dialogReducer = createReducer(INITIAL_STATE, (builder) => {
     builder.addCase(showDialogAction, (state, { payload: { name, options } }) => {
         state[name] = options || {};
-        return state;
     });
     builder.addCase(hideDialogAction, (state, { payload: { name } }) => {
         state[name] = undefined;
-        return state;
     });
 });
