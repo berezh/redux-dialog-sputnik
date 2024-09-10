@@ -1,6 +1,6 @@
 {
     "name": "redux-dialog-wrapper",
-    "version": "2.0.5",
+    "version": "2.1.0",
     "description": "Redux Dialog Wrapper",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
@@ -48,7 +48,8 @@
         "start": "npm run build-watch",
         "test": "ts-node test/test.ts",
         "lint": "eslint ./src/**/*.ts ./src/**/*.tsx",
-        "lint:fix": "eslint ./src/**/* --fix"
+        "lint:fix": "eslint ./src/**/* --fix",
+        "v": "npm --no-git-tag-version version minor"
     },
     "repository": {
         "type": "git",
